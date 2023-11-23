@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating a list
+        List<String> myList = new ArrayList<>();
+        myList.add("Java");
+        myList.add("Python");
+        myList.add("C++");
+
+        // Using the Collections framework to sort the list
+        Collections.sort(myList);
+
+        // Printing the sorted list
+        System.out.println("Sorted List: " + myList);
+    }
+}
