@@ -1,0 +1,25 @@
+public class ArrayExample {
+    public static void main(String[] args) {
+        // Creating an array
+        String[] array = new String[4];
+
+        // Adding elements
+        array[0] = "Apple";
+        array[1] = "Banana";
+        array[2] = "Orange";
+
+        // Accessing elements
+        System.out.println("Array: " + Arrays.toString(array));
+
+        // Adding elements at specific positions
+        array[3] = "Grapes";
+
+        // Iterating through the array
+        System.out.println("Modified Array: ");
+        for (String fruit : array) {
+            if (fruit != null) {
+                System.out.println(fruit);
+            }
+        }
+    }
+}
