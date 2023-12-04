@@ -1,0 +1,35 @@
+import java.util.LinkedList;
+
+public class LinkedListExample {
+    public static void main(String[] args) {
+        // Creating a LinkedList
+        LinkedList<String> linkedList = new LinkedList<>();
+
+        // Adding elements to the LinkedList
+        linkedList.add("Java");
+        linkedList.add("Python");
+        linkedList.add("C++");
+
+        // Displaying the LinkedList
+        System.out.println("Original LinkedList: " + linkedList);
+
+        // Adding elements at the beginning and end of the LinkedList
+        linkedList.addFirst("C#");
+        linkedList.addLast("JavaScript");
+
+        // Displaying the updated LinkedList
+        System.out.println("Updated LinkedList: " + linkedList);
+
+        // Removing elements from the LinkedList
+        linkedList.remove("C++");
+
+        // Displaying the LinkedList after removal
+        System.out.println("LinkedList after removal: " + linkedList);
+
+        // Accessing elements by index
+        String firstElement = linkedList.getFirst();
+        String lastElement = linkedList.getLast();
+        System.out.println("First Element: " + firstElement);
+        System.out.println("Last Element: " + lastElement);
+    }
+}
