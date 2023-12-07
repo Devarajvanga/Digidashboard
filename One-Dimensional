@@ -1,0 +1,20 @@
+# Creating a one-dimensional array
+my_array = [10, 20, 30, 40, 50]
+
+# Accessing elements using indices
+print("Element at index 0:", my_array[0])  # Output: 10
+print("Element at index 2:", my_array[2])  # Output: 30
+print("Element at index 4:", my_array[4])  # Output: 50
+
+# Modifying an element
+my_array[1] = 25
+print("Modified array:", my_array)  # Output: [10, 25, 30, 40, 50]
+
+# Length of the array
+array_length = len(my_array)
+print("Length of the array:", array_length)  # Output: 5
+
+# Iterating through the array
+print("Array elements:")
+for element in my_array:
+    print(element)
