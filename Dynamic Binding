@@ -1,0 +1,41 @@
+// Animal class with a speak method
+class Animal {
+    public void speak() {
+        System.out.println("Animal speaks");
+    }
+}
+
+// Dog class extends Animal and overrides the speak method
+class Dog extends Animal {
+    @Override
+    public void speak() {
+        System.out.println("Woof!");
+    }
+}
+
+// Cat class extends Animal and overrides the speak method
+class Cat extends Animal {
+    @Override
+    public void speak() {
+        System.out.println("Meow!");
+    }
+}
+
+// Polymorphic method that takes an Animal reference and calls its speak method
+class AnimalSound {
+    public static void makeSound(Animal animal) {
+        animal.speak(); // Dynamic binding at runtime
+    }
+}
+
+public class DynamicBindingExample {
+    public static void main(String[] args) {
+        // Creating instances of Dog and Cat
+        Animal dog = new Dog();
+        Animal cat = new Cat();
+
+        // Calling the makeSound method with dynamic binding
+        AnimalSound.makeSound(dog); // Output: Woof!
+        AnimalSound.makeSound(cat); // Output: Meow!
+    }
+}
