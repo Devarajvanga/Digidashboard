@@ -1,0 +1,50 @@
+public class MyClass {
+    // Fields (attributes) of the class
+    private int number;
+    private String text;
+
+    // Default constructor (no-arg constructor)
+    public MyClass() {
+        // Initializing fields with default values
+        this.number = 0;
+        this.text = "Default Text";
+    }
+
+    // Parameterized constructor
+    public MyClass(int number, String text) {
+        // Initializing fields with provided values
+        this.number = number;
+        this.text = text;
+    }
+
+    // Getter and setter methods for the fields
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    // Other methods of the class
+
+    public static void main(String[] args) {
+        // Creating an object using the default constructor
+        MyClass myObject1 = new MyClass();
+
+        // Creating an object using the parameterized constructor
+        MyClass myObject2 = new MyClass(42, "Custom Text");
+
+        // Accessing and printing values
+        System.out.println("Object 1 - Number: " + myObject1.getNumber() + ", Text: " + myObject1.getText());
+        System.out.println("Object 2 - Number: " + myObject2.getNumber() + ", Text: " + myObject2.getText());
+    }
+}
