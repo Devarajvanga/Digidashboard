@@ -1,0 +1,45 @@
+public class Person {
+    // Fields (attributes) of the class
+    private String name;
+    private int age;
+
+    // Parameterized constructor
+    public Person(String name, int age) {
+        // Initializing fields with provided values
+        this.name = name;
+        this.age = age;
+    }
+
+    // Getter and setter methods for the fields
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    // Other methods of the class
+
+    public static void main(String[] args) {
+        // Creating an object using the parameterized constructor
+        Person person1 = new Person("John Doe", 25);
+
+        // Accessing and printing values
+        System.out.println("Person 1 - Name: " + person1.getName() + ", Age: " + person1.getAge());
+
+        // Creating another object using the parameterized constructor
+        Person person2 = new Person("Jane Doe", 30);
+
+        // Accessing and printing values
+        System.out.println("Person 2 - Name: " + person2.getName() + ", Age: " + person2.getAge());
+    }
+}
