@@ -1,0 +1,27 @@
+// The "Engine" class represents a component that can be used in various vehicles
+class Engine {
+    public void start() {
+        System.out.println("Engine started");
+    }
+}
+
+// The "Car" class is composed of an "Engine" object
+class Car {
+    private Engine engine; // Composition
+
+    public Car() {
+        this.engine = new Engine(); // Create an Engine object when constructing a Car
+    }
+
+    public void start() {
+        engine.start(); // Delegating the start operation to the Engine object
+        System.out.println("Car started");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car myCar = new Car();
+        myCar.start();
+    }
+}
