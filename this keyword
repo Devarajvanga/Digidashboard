@@ -1,0 +1,23 @@
+public class MyClass {
+    private int value;
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
+    public void processData() {
+        // Pass the current object to another method
+        process(this);
+    }
+
+    private void process(MyClass obj) {
+        // Do something with the object
+        System.out.println("Processing object with value: " + obj.value);
+    }
+
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.setValue(42);
+        obj.processData();
+    }
+}
