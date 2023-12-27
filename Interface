@@ -1,0 +1,38 @@
+// Define an interface
+interface MyInterface {
+    // Abstract method (method without a body)
+    void myMethod();
+
+    // Another abstract method
+    void anotherMethod();
+
+    // Constant (implicitly public, static, and final)
+    int MY_CONSTANT = 42;
+}
+
+// Implement the interface in a class
+class MyClass implements MyInterface {
+    // Implementing the first abstract method
+    public void myMethod() {
+        System.out.println("Implementation of myMethod");
+    }
+
+    // Implementing the second abstract method
+    public void anotherMethod() {
+        System.out.println("Implementation of anotherMethod");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Create an instance of the implementing class
+        MyClass myObj = new MyClass();
+
+        // Call methods through the interface
+        myObj.myMethod();
+        myObj.anotherMethod();
+
+        // Access the constant from the interface
+        System.out.println("Constant value: " + MyInterface.MY_CONSTANT);
+    }
+}
