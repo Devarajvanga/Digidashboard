@@ -1,0 +1,38 @@
+class Car:
+    def __init__(self, make, model):
+        self.__make = make  # private attribute
+        self.__model = model  # private attribute
+        self.__speed = 0  # private attribute
+
+    # public methods to access and modify private attributes
+    def get_make(self):
+        return self.__make
+
+    def get_model(self):
+        return self.__model
+
+    def get_speed(self):
+        return self.__speed
+
+    def accelerate(self, increment):
+        self.__speed += increment
+
+    def brake(self, decrement):
+        self.__speed -= decrement
+        if self.__speed < 0:
+            self.__speed = 0
+
+# Creating an instance of the Car class
+my_car = Car("Toyota", "Camry")
+
+# Accessing attributes using public methods
+print("Make:", my_car.get_make())  # Make: Toyota
+print("Model:", my_car.get_model())  # Model: Camry
+print("Speed:", my_car.get_speed())  # Speed: 0
+
+# Modifying attributes using public methods
+my_car.accelerate(20)
+print("Speed after acceleration:", my_car.get_speed())  # Speed after acceleration: 20
+
+my_car.brake(10)
+print("Speed after braking:", my_car.get_speed())  # Speed after braking: 10
