@@ -1,0 +1,38 @@
+interface Shape {
+    void draw();
+}
+
+class Circle implements Shape {
+    @Override
+    public void draw() {
+        System.out.println("Drawing a Circle");
+    }
+
+    // Additional methods specific to Circle
+}
+
+class Rectangle implements Shape {
+    @Override
+    public void draw() {
+        System.out.println("Drawing a Rectangle");
+    }
+
+    // Additional methods specific to Rectangle
+}
+
+public class InstanceOfInterfaceExample {
+    public static void main(String[] args) {
+        Shape shape = new Circle(); // Creating an instance of Circle, but stored in a variable of type Shape
+
+        // Using instanceof to check if the object is an instance of a specific interface
+        if (shape instanceof Circle) {
+            System.out.println("The shape is a Circle");
+        } else if (shape instanceof Rectangle) {
+            System.out.println("The shape is a Rectangle");
+        } else if (shape instanceof Shape) {
+            System.out.println("The shape is a generic Shape");
+        } else {
+            System.out.println("The shape is of unknown type");
+        }
+    }
+}
