@@ -1,0 +1,28 @@
+# Define a simple class to be wrapped
+class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):
+        return "Woof!"
+
+# Define a wrapper class for the Dog class
+class DogWrapper:
+    def __init__(self, dog):
+        self.dog = dog
+
+    def greet(self):
+        return f"Hello, I'm {self.dog.name}!"
+
+    def modified_bark(self):
+        return f"{self.dog.bark()} (but modified)"
+
+# Create an instance of the Dog class
+my_dog = Dog(name="Buddy")
+
+# Create an instance of the DogWrapper class, wrapping the Dog instance
+my_wrapped_dog = DogWrapper(dog=my_dog)
+
+# Use the wrapper class to access the modified behavior
+print(my_wrapped_dog.greet())          # Output: Hello, I'm Buddy!
+print(my_wrapped_dog.modified_bark())   # Output: Woof! (but modified)
